@@ -3,25 +3,13 @@
 **Table of content**
 | Challenge |  PR link     |date   |
 |----------|:-------------:|------:|
-|challenge1|               |       |
+|Array Reverse|[Array Reverse](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/1)|29-11-2020|
+|Array Shifting|[Array Shifting](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/2)|30-11-2020|
 |          |               |       |
 |          |               |       |
 |          |               |       |
 |          |               |       |
-|          |               |       |
 
 
 
 
-
-# Reverse an Array
-<!-- Short summary or background information -->
-
-## Challenge
-<!-- Description of the challenge -->
-
-## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-
-## Solution
-<!-- Embedded whiteboard image -->
