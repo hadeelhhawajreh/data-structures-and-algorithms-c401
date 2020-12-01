@@ -1,3 +1,4 @@
+[Array Shifting](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/2)
 
 # Shift an Array
 adding value to the list by take list like [1,2,3,4] and adding(10)  the output is [1,2,10,3,4] 
