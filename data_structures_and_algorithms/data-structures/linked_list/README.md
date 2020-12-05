@@ -1,4 +1,4 @@
-[Likked List](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/4)
+[Likked List](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/5)
 
 
 # Linked list 
