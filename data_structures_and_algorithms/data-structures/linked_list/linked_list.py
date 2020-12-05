@@ -85,3 +85,4 @@ if __name__ == "__main__":
     ll.insert_node(25)
     
     print(ll)
+# 
