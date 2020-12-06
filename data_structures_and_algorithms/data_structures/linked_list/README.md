@@ -49,4 +49,3 @@ and how to check the include value in ll
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![drawing](../../assets/ll.png)
