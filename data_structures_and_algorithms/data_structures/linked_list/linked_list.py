@@ -26,7 +26,6 @@ class LinkedList():
                 #current is last node
                 # make curret point to new nodes 
                 current.next=node
-        self.size+=1
         
     def __len__(self):
         return self.size
