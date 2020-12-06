@@ -41,6 +41,28 @@ def test_str():
     assert ll.__str__()=='{25} -> {20} -> {15} -> {10} -> {5} -> NULL'
 
 
+def test_insert_before():
+    ll=LinkedList()
+    ll.insert_node(5)
+    ll.insert_node(10)
+    ll.insert_node(15)
+    ll.insert_node(20)
+    ll.insert_node(25)
+    ll.insert_before(10,-1)
+    assert ll.__str__()=='{25} -> {20} -> {15} -> {-1} -> {10} -> {5} -> NULL'
+
+
+
+def test_insert_after():
+    ll=LinkedList()
+    ll.insert_node(5)
+    ll.insert_node(10)
+    ll.insert_node(15)
+    ll.insert_node(20)
+    ll.insert_node(25)
+    ll.insert_after(10,0)
+    assert ll.__str__()=='{25} -> {20} -> {15} -> {10} -> {0} -> {5} -> NULL'
+
 
 # it is not work with me :)
 # @pytest.fixture
