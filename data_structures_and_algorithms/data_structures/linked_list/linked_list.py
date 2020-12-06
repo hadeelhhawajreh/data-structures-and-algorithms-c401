@@ -6,27 +6,11 @@ class Node:
         self.value=value
         self.next=next
 
-
 class LinkedList():
     def __init__(self):
         self.head=None
-        self.size=0
-        # create a node --> add data ,next
-    def append(self,data):# adding at the end o(n)
-        #st1 : init current with head (i=0)
-        node=Node(data)  
-        if self.head==None:
-            self.head=node
-          # create data node 
-          # --> keep moving until reach ast node l
-        else:
-            current=self.head
-            while(current.next!=None):
-                current=current.next 
-                #current is last node
-                # make curret point to new nodes 
-                current.next=node
-        
+
+
     def __len__(self):
         return self.size
         
@@ -37,7 +21,6 @@ class LinkedList():
         '''
         node2=Node(value,self.head)
         self.head=node2
-        self.size+=1
     
     def __str__(self):
         '''
@@ -70,12 +53,59 @@ class LinkedList():
             if current.value==inc_val:
                 return True
             else:
-                current.next
-            return False
+                current=current.next
+        return False
 
+    def insert_before(self,indx,val):
+        node3=Node(val)
+        if not self.includes_node(indx):
+            return 'value not found '
+        elif self.head.value==indx:
+            self.insert_node(val)
+        else:
+            i=self.head
+            while i.next!=None:
+                if i.next.value==indx:
+                    node3.next=i.next
+                    i.next=node3
+                    break
+                i=i.next
+        
+    def insert_after(self,indx,val):
+        node3=Node(val)
+        if not self.includes_node(indx):
+            return 'value not found '
+        else:
+            i=self.head
+            while i.next!=None:
+                if i.value==indx:
+                    node3.next=i.next
+                    i.next=node3
+                    break
+                i=i.next
+
+    def append(self,data):
+        #st1 : init current with head (i=0)
+        node=Node(data)  
+        if self.head==None:
+            self.head=node
+          # create data node 
+        #st2 --> keep moving until reach ast node l
+        else:
+            current=self.head
+            while(current.next!=None):
+                current=current.next 
+                #current is last node
+                # make curret point to new nodes 
+            current.next=node
+            
+    1
 if __name__ == "__main__":
     ll=LinkedList()
     ll.insert_node(5)
-    ll.insert_node(10) 
-
-    print(ll.includes_node(10))
+    ll.insert_node(10)
+    ll.insert_node(15)
+    ll.insert_node(20)
+    ll.insert_node(25)
+    print(ll.insert_after(10,0))
+    print(ll)

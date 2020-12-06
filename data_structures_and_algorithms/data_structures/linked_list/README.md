@@ -2,6 +2,9 @@
 
 [PR 2](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/6)
 
+
+[code challenge 6](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/9)
+
 # Linked list 
 linked list is a type of to add and orgnize data 
 containes node 
