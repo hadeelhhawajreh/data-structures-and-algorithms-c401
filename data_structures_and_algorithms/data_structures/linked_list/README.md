@@ -1,5 +1,6 @@
-[Likked List](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/5)
-[Likked List](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/6)
+[PR 1](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/5)
+
+[PR 2](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/6)
 
 # Linked list 
 linked list is a type of to add and orgnize data 
@@ -26,5 +27,5 @@ and how to check the include value in ll
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![drawing](../../assets/drawing.png)
+![drawing](../../assets/ll.png)
 
