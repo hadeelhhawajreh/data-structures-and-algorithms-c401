@@ -10,9 +10,29 @@ class LinkedList():
     def __init__(self):
         self.head=None
 
+    def kt_from_end(self,k):
+        if k>=0:
+            if self.head==None:
+                return 'empty linked list'
+            else:
+                i=0
+                current=self.head
+                while current:
+                    current=current.next
+                    i+=1
+                if  i-1<k:
+                    return 'out side index'
+               
 
-    def __len__(self):
-        return self.size
+                else:
+                    index=i-k
+                    current=self.head
+                    for j in range(index-1):
+                        current=current.next
+                    return current.value
+        else:
+            return 'invalid input'
+         
         
 
     def insert_node(self,value): #adding at beginning o(1)
@@ -99,7 +119,8 @@ class LinkedList():
                 # make curret point to new nodes 
             current.next=node
             
-    1
+    
+
 if __name__ == "__main__":
     ll=LinkedList()
     ll.insert_node(5)
@@ -107,5 +128,5 @@ if __name__ == "__main__":
     ll.insert_node(15)
     ll.insert_node(20)
     ll.insert_node(25)
-    print(ll.insert_after(10,0))
     print(ll)
+    print(ll.kt_from_end(2))
