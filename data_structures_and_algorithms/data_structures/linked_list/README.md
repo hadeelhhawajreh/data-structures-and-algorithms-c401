@@ -3,10 +3,9 @@
 [PR 2](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/6)
 
 
-# Linked list 
-linked list is a type of to add and orgnize data 
-containes node 
-each node has a value and next 
+# Linked list I
++ linked list is a type of to add and orgnize data  containes node 
++ each node has a value and next 
 
 
 ## Challenge
@@ -19,7 +18,6 @@ and how to check the include value in ll
     time o(1)
     space o(1)
 
-
 + Include function 
     time o(n)
     space o(1)
@@ -30,22 +28,44 @@ and how to check the include value in ll
 <!-- Embedded whiteboard image -->
 ![drawing](../../assets/ll.png)
 
----------------------------------------------------------------------------------------
-### code challenge 6 
+
+--------------------------------------------------------------
+
 [code challenge 6](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/9)
+
+
+# Linked list II 
++ append(value) which adds a new node with the given value to the end of the list
+
++ insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+
++ insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+
+
+## Challenge
+
+
+
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-+ Insert at beginning   function 
++ Insert before  function 
     time o(1)
     space o(1)
 
 
-+ appened at end function 
-    time o(n)
++ Insert after  function 
+    time o(1)
     space o(1)
+
+
++ append 
+    space o(n)
+    time o(n)
+
 
 
 
 ## Solution
 <!-- Embedded whiteboard image -->
+![drawing](../../assets/ll.png)
