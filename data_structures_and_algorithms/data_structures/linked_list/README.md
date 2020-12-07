@@ -69,6 +69,7 @@ and how to check the include value in ll
 ## Solution
 <!-- Embedded whiteboard image -->
 
+![img](../../assets/ll3.png)
 
 
 --------------------------------------------------------------
@@ -97,3 +98,4 @@ and how to check the include value in ll
 
 ## Solution
 <!-- Embedded whiteboard image -->
+![img](../../assets/l4.png)
