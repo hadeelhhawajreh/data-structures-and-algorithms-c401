@@ -92,6 +92,7 @@ class LinkedList():
                 i=i.next
         
     def insert_after(self,indx,val):
+        print('index',indx)
         node3=Node(val)
         if not self.includes_node(indx):
             return 'value not found '
@@ -103,6 +104,7 @@ class LinkedList():
                     i.next=node3
                     break
                 i=i.next
+            i.next=node3
 
     def append(self,data):
         #st1 : init current with head (i=0)
@@ -128,5 +130,8 @@ if __name__ == "__main__":
     ll.insert_node(15)
     ll.insert_node(20)
     ll.insert_node(25)
+    print(ll.insert_after(10,0))
+    print(ll.insert_before(5,-1))
+    print(ll.insert_after(5,-20))
     print(ll)
     print(ll.kt_from_end(2))
