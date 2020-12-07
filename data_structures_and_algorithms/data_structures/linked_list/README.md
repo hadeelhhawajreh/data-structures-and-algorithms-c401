@@ -68,3 +68,32 @@ and how to check the include value in ll
 
 ## Solution
 <!-- Embedded whiteboard image -->
+
+
+
+--------------------------------------------------------------
+
+[code challenge 6](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/10)
+
+
+# Linked list_III 
+ Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
+
+
+## Challenge
+
+
+
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
++ kth_at_end 
+    space o(n)
+    time o(n)
+
+
+
+
+## Solution
+<!-- Embedded whiteboard image -->

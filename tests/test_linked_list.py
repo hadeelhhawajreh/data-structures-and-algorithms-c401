@@ -64,6 +64,68 @@ def test_insert_after():
     assert ll.__str__()=='{25} -> {20} -> {15} -> {10} -> {0} -> {5} -> NULL'
 
 
+
+"""
+    test case:
+    Where k is greater than the length of the linked list
+    Where k and the length of the list are the same
+    Where k is not a positive integer
+    Where the linked list is of a size 1
+    “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+    """
+
+def test_kth_at_end():
+    ll=LinkedList()
+    ll.insert_node(5)
+    ll.insert_node(10)
+    ll.insert_node(15)
+    ll.insert_node(20)
+    ll.insert_node(25)
+    ll.kt_from_end(0)
+    actual=ll.kt_from_end(0)
+    assert actual==5
+
+
+def test_Happy_Path():
+    ll=LinkedList()
+    ll.insert_node(5)
+    ll.insert_node(10)
+    ll.insert_node(15)
+    ll.insert_node(20)
+    ll.insert_node(25)
+    ll.kt_from_end(0)
+    actual=ll.kt_from_end(2)
+    assert actual==15
+
+def test_kth_at_end_invalid():
+    ll=LinkedList()
+    ll.insert_node(5)
+    ll.insert_node(10)
+    ll.insert_node(15)
+    ll.insert_node(20)
+    ll.insert_node(25)
+    ll.kt_from_end(-1)
+    actual=ll.kt_from_end(-1)
+    assert actual=='invalid input'
+    
+
+def test_kth_at_out_side():
+    ll=LinkedList()
+    ll.insert_node(5)
+    ll.insert_node(10)
+    ll.insert_node(15)
+    ll.insert_node(20)
+    ll.insert_node(25)
+    ll.kt_from_end(7)
+    actual=ll.kt_from_end(7)
+    assert actual=='out side index'
+
+def test_kth_empty_ll():
+    ll=LinkedList()
+    actual=ll.kt_from_end(7)
+    assert actual=='empty linked list'
+
+
 # it is not work with me :)
 # @pytest.fixture
 # def prep_ll():
