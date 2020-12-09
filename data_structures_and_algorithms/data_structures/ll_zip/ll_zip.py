@@ -18,7 +18,7 @@ class LinkedList:
     def printList(self): 
         temp = self.head 
         while temp: 
-            print(temp.data, end=' ') 
+            print(str(temp.data), end=' ') 
             temp = temp.next
         return
     # Method to add element to list 

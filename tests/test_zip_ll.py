@@ -14,5 +14,5 @@ def test_zip():
     
     list_one.head = mergeLists(list_one.head, list_two.head) 
     
-    actual=list_one.printList()
-    assert actual=='2 3 5 10 15 20 %'
+    actual=list_one.printList() 
+    assert actual=='2 3 5 10 15 20'
