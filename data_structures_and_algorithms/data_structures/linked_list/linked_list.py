@@ -50,9 +50,6 @@ class LinkedList():
 
         if self.head==None:
             return('Empty linked List')
-             
-        # "{  } -> { b } -> { c } -> NULL"
-        # {50} -> {5} -> NULL
         i=self.head
         strll=''
         while i:
@@ -120,8 +117,7 @@ class LinkedList():
                 #current is last node
                 # make curret point to new nodes 
             current.next=node
-            
-    
+
 
 if __name__ == "__main__":
     ll=LinkedList()
