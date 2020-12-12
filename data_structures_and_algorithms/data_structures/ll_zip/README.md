@@ -21,5 +21,6 @@ find the best way with  o(1)
 
 ## Solution
 <!-- Embedded whiteboard image -->
+![drawing](../../assets/l3.png)
 
 
