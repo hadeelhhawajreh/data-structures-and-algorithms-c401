@@ -10,6 +10,7 @@
 |Linked List2|[Linked](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/9)|6-12-2020|
 |Linked List3|[Linked3](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/11)|7-12-2020|
 |Linked List3|[Linked4](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/12)|8-12-2020|
+|Stack and Queue |[S&Q](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/13)|12-12-2020|
 
 
 
