@@ -13,30 +13,30 @@ peek -> return the first value 'the front' of stack *
 and in the  queue, we have  two pointer, front and rear  rather than stack one pointer top
 
 ## Approach & Efficiency
->> **Stack**
+> **Stack**
 
->> pop() ->o(1)
+* pop() ->o(1)
 
->> push(value)-> o(1)
+* push(value)-> o(1)
 
->> isEmpty ->o(1)
+* isEmpty ->o(1)
 
->> peek()-> o(1)
+* peek()-> o(1)
 
 
->> **Queue**
+> **Queue**
 
->> Dequeue() ->o(1)
+* Dequeue() ->o(1)
 
->> Enqueue(value)-> o(1)
+* Enqueue(value)-> o(1)
 
->> isEmpty ->o(1)
+* isEmpty ->o(1)
 
->> Peek()-> o(1)
+* Peek()-> o(1)
 
 
 
 ## API
 <!-- Description of each method publicly available to your Stack and Queue-->
-![img](assets/stack.png)
-![img](../../assets/queue.png)
+![img](data_structures_and_algorithms/assets/stack.png)
+![img](data_structures_and_algorithms/assets/queue.png)
