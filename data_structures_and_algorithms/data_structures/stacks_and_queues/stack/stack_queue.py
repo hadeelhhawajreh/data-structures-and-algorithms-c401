@@ -39,6 +39,15 @@ class Stack: #revers the linked list
 
     def peek(self):
         return self.top.value 
+    # add print function 
+    def print(self):
+        stg=''
+        while self.top:
+            # if self.top:
+            #     stg+=str(self.top.value) +'->'
+            stg+=str(self.top.value) +'->'
+            self.top=self.top.next
+        return stg
 
 
 class Queue:
