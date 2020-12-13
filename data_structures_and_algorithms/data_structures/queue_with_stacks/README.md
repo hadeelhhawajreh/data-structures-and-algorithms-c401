@@ -19,4 +19,4 @@ time ->o(1)
 
 ## API
 <!-- Description of each method publicly available to your Stack and Queue-->
-![img](../../../../assets/PQ.png)
+![img](../../assets/pq.png)
