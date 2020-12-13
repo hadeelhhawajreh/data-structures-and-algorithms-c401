@@ -38,5 +38,5 @@ and in the  queue, we have  two pointer, front and rear  rather than stack one p
 
 ## API
 <!-- Description of each method publicly available to your Stack and Queue-->
-![img](../../assets/stack.png)
-![img](../../assets/queue.png)
+![img](../../../assets/stack.png)
+![img](../../../assets/queue.png)
