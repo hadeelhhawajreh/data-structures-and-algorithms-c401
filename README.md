@@ -12,7 +12,7 @@
 |Linked List3|[Linked4](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/12)|8-12-2020|
 |Stack and Queue |[S&Q](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/13)|12-12-2020|
 |PseudoQueue |[PseudoQueue](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/14)|13-12-2020|
-
+|multi bracket |[multi bracket](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/15)|15-12-2020|
 
 
 
