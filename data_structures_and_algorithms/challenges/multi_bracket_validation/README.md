@@ -17,4 +17,4 @@ space o(n)
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![drawing](../../assets/.png)
+![drawing](../../assets/board13.png)
