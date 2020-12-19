@@ -14,5 +14,6 @@
 |PseudoQueue |[PseudoQueue](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/14)|13-12-2020|
 |multi bracket |[multi bracket](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/15)|15-12-2020|
 |fifo animal |[fifo animal](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/17)|19-12-2020|
+|Tree |[tree](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/18)|20-12-2020|
 
 
