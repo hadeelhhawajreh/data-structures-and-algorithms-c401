@@ -19,7 +19,6 @@ class BinaryTree:
 
     def PreOrder(self):
         """
-
         depth first traversals and returns an array of the values, ordered appropriately.
         Pre-order: root >> left >> right
 
@@ -35,6 +34,7 @@ class BinaryTree:
         return output_pre
     
     def InOrder(self):
+
         """
 
         depth first traversals and returns an array of the values, ordered appropriately.
@@ -66,7 +66,8 @@ class BinaryTree:
             output_post.append(node.value)
         _walk(self.root)
         return output_post
-    # /******************
+
+      # /******************
    
     def maximum_value(self,cur_node):
         """
@@ -115,6 +116,7 @@ class BinaryTree:
 # *******************
 
 
+
 class binarySearchTree(BinaryTree):
     def add(self,value):
         """
@@ -150,7 +152,6 @@ class binarySearchTree(BinaryTree):
                 return True
         return False
         
-        
     ## (_) * private methon for the class
 
     def _contains(self,value,node):
@@ -165,7 +166,7 @@ class binarySearchTree(BinaryTree):
         if value ==node.value:
             return True
 
-
+   
 if __name__ == "__main__":
     Bt=BinaryTree()
     Bt.root=Node(5)
