@@ -54,3 +54,26 @@ def test_bst():
     assert bst.root.right.right.value==12
 
 
+def test_bst_contains_true():
+    bst=binarySearchTree()
+    bst.add(2)
+    bst.add(10)
+    bst.add(12)
+    bst.add(-2)
+    bst.add(-1)
+    actual =bst.contains(10)
+    assert actual==True
+
+
+
+def test_bst_contains_false():
+    bst=binarySearchTree()
+    bst.add(2)
+    bst.add(10)
+    bst.add(12)
+    bst.add(-2)
+    bst.add(-1)
+    actual =bst.contains(5)
+    assert actual==False
+
+
