@@ -1,5 +1,5 @@
 from data_structures_and_algorithms.challenges.Tree.binary_tree.binary_search_tree  import *
-from  data_structures_and_algorithms.challenges.Tree.binary_tree.binary_tree import *
+# from  data_structures_and_algorithms.challenges.Tree.binary_tree.binary_tree import *
 def test_pre():
     Bt=BinaryTree()
     Bt.root=Node(5)
@@ -77,3 +77,13 @@ def test_bst_contains_false():
     assert actual==False
 
 
+def test_max():
+    Bt=BinaryTree()
+    Bt.root=Node(5)
+    Bt.root.left=Node(4)
+    Bt.root.left.left=Node(2)
+    Bt.root.left.right=Node(-1)
+    Bt.root.right=Node(14)
+    Bt.root.right.left=Node(16)
+    Bt.root.right.right=Node(20)
+    assert Bt.maximum_value(Bt.root)==20

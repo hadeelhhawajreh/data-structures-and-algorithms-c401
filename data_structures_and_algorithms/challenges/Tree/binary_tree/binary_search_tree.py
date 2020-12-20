@@ -66,18 +66,56 @@ class BinaryTree:
             output_post.append(node.value)
         _walk(self.root)
         return output_post
-    
-    def max_value(self,node):
+
+      # /******************
+   
+    def maximum_value(self,cur_node):
+        """
+        fuction that find  the maximum value stored in the tree.
+        """        
+        if not self.root:
+            return 'EMPTY TREE '
         
+        else:
+            max = cur_node.value
+
+            if cur_node.left != None:
+                left_side = self.maximum_value(cur_node.left)
+                if left_side > max:
+                    max = left_side
+
+            if cur_node.right != None:
+                right_side = self.maximum_value(cur_node.right)
+                if right_side > max:
+                    max = right_side
         
-        max=self.root.value
-        left_side=self.max_value(self.root.left)
-        right_side=self.max_value(self.root.right)
-        if left_side>max:
-            max=left_side
-        if right_side>max:
-            max=right_side
         return max
+
+
+    def minimum_value(self,cur_node):
+        """
+        fuction that find  the minimum value stored in the tree.
+        """        
+        if not self.root:
+            return 'EMPTY TREE '
+        
+        else:
+            min = cur_node.value
+
+            if cur_node.left != None:
+                left_side = self.minimum_value(cur_node.left)
+                if left_side < min:
+                    min = left_side
+
+            if cur_node.right != None:
+                right_side = self.minimum_value(cur_node.right)
+                if right_side < min:
+                    min = right_side
+        
+        return min
+# *******************
+
+
 
 class binarySearchTree(BinaryTree):
     def add(self,value):
@@ -138,19 +176,21 @@ if __name__ == "__main__":
     Bt.root.right=Node(14)
     Bt.root.right.left=Node(16)
     Bt.root.right.right=Node(20)
-    print(Bt.max_value(Bt.root))
-    # print(Bt.PreOrder())
-    # print('************')
-    # print(Bt.InOrder())
-    # print('************')
-    # print(Bt.PostOrder())
-    # bst=binarySearchTree()
-    # bst.add(2)
-    # bst.add(10)
-    # bst.add(12)
-    # bst.add(-2)
-    # bst.add(-1)
-    # print(bst.contains(10))
+    print('***** MAX *******')
+    print(Bt.maximum_value(Bt.root))
+    print('***** MIN *******')
+    print(Bt.minimum_value(Bt.root))
+    print('************')
+    print(Bt.InOrder())
+    print('************')
+    print(Bt.PostOrder())
+    bst=binarySearchTree()
+    bst.add(2)
+    bst.add(10)
+    bst.add(12)
+    bst.add(-2)
+    bst.add(-1)
+    print(bst.contains(10))
 
         #     2
         #   /    \
