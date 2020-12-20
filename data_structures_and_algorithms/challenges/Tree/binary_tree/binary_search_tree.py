@@ -1,4 +1,73 @@
-from binary_tree import *
+class Node:
+    def __init__(self,value):
+        self.value=value
+        self.left=None
+        self.right=None
+    
+
+class BinaryTree:
+    """
+    Depth First
+    Depth first traversal is where we prioritize going through the depth (height) of the tree first. 
+    There are multiple ways to carry out depth first traversal,
+     and each method changes the order in which we search/print the root.
+    Here are three methods for depth first traversal:
+    """    
+    def __init__(self):
+        self.root=None
+
+
+    def PreOrder(self):
+        """
+
+        depth first traversals and returns an array of the values, ordered appropriately.
+        Pre-order: root >> left >> right
+
+        """    
+        output_pre=[]
+        def _walk(node):
+            output_pre.append(node.value)
+            if node.left:
+                _walk(node.left)
+            if node.right:
+                _walk(node.right)
+        _walk(self.root)
+        return output_pre
+    
+    def InOrder(self):
+        """
+
+        depth first traversals and returns an array of the values, ordered appropriately.
+        In-order: left >> root >> right
+
+        """        
+        output_in=[]
+        def _walk(node):
+            if node.left:
+                _walk(node.left)
+            output_in.append(node.value)
+            if node.right:
+                _walk(node.right)
+        _walk(self.root)
+        return output_in
+
+    def PostOrder(self):
+        """
+        depth first traversals and returns an array of the values, ordered appropriately.
+        Post-order: left >> right >> root
+
+        """        
+        output_post=[]
+        def _walk(node):
+            if node.left:
+                _walk(node.left)
+            if node.right:
+                _walk(node.right)
+            output_post.append(node.value)
+        _walk(self.root)
+        return output_post
+    
+
 class binarySearchTree(BinaryTree):
     def add(self,value):
         """
@@ -26,36 +95,52 @@ class binarySearchTree(BinaryTree):
                         _walk(node.right)
             _walk(self.root)
 
-    def contains(self, val):
+    def contains(self, value):
 
-        if not self.root:
-            return False
-        else:
-            def _walk(node):
-                if val ==node.value:
-                    return True
-                elif val< node.value:
-                    if self.left :
-                        return self.left._walk(val)
-                    # return False
+        if  self.root:
+            flag=self._contains(value,self.root)
+            if flag:
+                return True
+        return False
+        
+        
+    ## (_) * private methon for the class
 
-                elif val > node.value:
-                    if self.right:
-                        return self.right._walk(val)
-                    # return False
-                else:
-                    return True
-                
+    def _contains(self,value,node):
+        if value< node.value and node.left:
+            # if self.left :
+                return self._contains(value,node.left)
+            # return False
+
+        if value > node.value and node.right:
+            # if self.right:
+                return self._contains(value,node.right)
+        if value ==node.value:
+            return True
 
 
 if __name__ == "__main__":
+    Bt=BinaryTree()
+    Bt.root=Node(5)
+    Bt.root.left=Node(4)
+    Bt.root.left.left=Node(2)
+    Bt.root.left.right=Node(-1)
+    Bt.root.right=Node(14)
+    Bt.root.right.left=Node(16)
+    Bt.root.right.right=Node(20)
+
+    print(Bt.PreOrder())
+    print('************')
+    print(Bt.InOrder())
+    print('************')
+    print(Bt.PostOrder())
     bst=binarySearchTree()
     bst.add(2)
     bst.add(10)
     bst.add(12)
     bst.add(-2)
     bst.add(-1)
-    print(bst.contains(5))
+    print(bst.contains(10))
 
         #     2
         #   /    \
@@ -63,12 +148,6 @@ if __name__ == "__main__":
         #   \    /
         #   -1   12
 
-assert bst.root.value==2
-assert bst.root.left.value==-2
-assert bst.root.left.right.value==-1
-assert bst.root.right.value==10
-assert bst.root.right.right.value==12
-print('Doooooooooooooooooone ,yes')
 
 
 
