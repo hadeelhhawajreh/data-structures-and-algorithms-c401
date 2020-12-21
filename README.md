@@ -15,5 +15,5 @@
 |multi bracket |[multi bracket](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/15)|15-12-2020|
 |fifo animal |[fifo animal](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/17)|19-12-2020|
 |Tree |[tree](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/18)|20-12-2020|
-
+|Max value in BT |[max_val in Bt](https://github.com/hadeelhhawajreh/data-structures-and-algorithms-c401/pull/20)|21-12-2020|
 
