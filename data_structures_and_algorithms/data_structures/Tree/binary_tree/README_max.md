@@ -9,6 +9,6 @@ check right side and if any value more than max re-assign max=right_side
 ## Approach & Efficiency
 Time Complexity : O(N).
 
-Auxiliary Space : O(1).
+Space Complexity : O(1).
 ## Solution
 ![img](../../../assets/max.png)

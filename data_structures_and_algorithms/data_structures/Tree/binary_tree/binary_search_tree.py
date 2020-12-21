@@ -10,12 +10,11 @@ class BinaryTree:
     Depth First
     Depth first traversal is where we prioritize going through the depth (height) of the tree first. 
     There are multiple ways to carry out depth first traversal,
-     and each method changes the order in which we search/print the root.
+    and each method changes the order in which we search/print the root.
     Here are three methods for depth first traversal:
     """    
     def __init__(self):
         self.root=None
-
 
     def PreOrder(self):
         """
@@ -34,9 +33,7 @@ class BinaryTree:
         return output_pre
     
     def InOrder(self):
-
         """
-
         depth first traversals and returns an array of the values, ordered appropriately.
         In-order: left >> root >> right
 
@@ -67,7 +64,7 @@ class BinaryTree:
         _walk(self.root)
         return output_post
 
-      # /******************
+      # /****************** new function
    
     def maximum_value(self,cur_node):
         """
@@ -79,12 +76,12 @@ class BinaryTree:
         else:
             max = cur_node.value
 
-            if cur_node.left != None:
+            if cur_node.left :
                 left_side = self.maximum_value(cur_node.left)
                 if left_side > max:
                     max = left_side
 
-            if cur_node.right != None:
+            if cur_node.right :
                 right_side = self.maximum_value(cur_node.right)
                 if right_side > max:
                     max = right_side
@@ -121,7 +118,7 @@ class binarySearchTree(BinaryTree):
     def add(self,value):
         """
         Add that accepts a value, and adds a new node with that value in the correct location
-         in the binary search tree.
+        in the binary search tree.
         """        
         if not self.root:
             self.root=Node(value)
@@ -152,7 +149,7 @@ class binarySearchTree(BinaryTree):
                 return True
         return False
         
-    ## (_) * private methon for the class
+    ## (_) -> private methon for the class
 
     def _contains(self,value,node):
         if value< node.value and node.left:
@@ -181,16 +178,19 @@ if __name__ == "__main__":
     print('***** MIN *******')
     print(Bt.minimum_value(Bt.root))
     print('************')
-    print(Bt.InOrder())
+    print(f'PreOrder :{Bt.PreOrder()}')
     print('************')
-    print(Bt.PostOrder())
+    print(f'InOrder :{Bt.InOrder()}')
+    print('************')
+    print(f'PostOrder :{Bt.PostOrder()}')
+    print('************')
     bst=binarySearchTree()
     bst.add(2)
     bst.add(10)
     bst.add(12)
     bst.add(-2)
     bst.add(-1)
-    print(bst.contains(10))
+    print(f'contains 10 :{bst.contains(10)}')
 
         #     2
         #   /    \
