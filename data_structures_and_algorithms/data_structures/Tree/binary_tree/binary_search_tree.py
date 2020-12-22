@@ -1,3 +1,4 @@
+# from stacks_and_queues.stack_queue import Queue
 class Node:
     def __init__(self,value):
         self.value=value
@@ -5,12 +6,41 @@ class Node:
         self.right=None
     
 
+def breadthFirst(root):
+    if not root:
+        return 
+    else:
+        queue=[]
+        queue.append(root)
+    while(len(queue)>0):
+        print(queue[0])
+        queue.pop(0)
+    if node.left:
+           queue.append(node.left)
+    if node.right:
+        queue.append(node.right)
+
+
+    # op=[]
+    # breadth=Queue()
+    # breadth.enqueue(root)
+    # while breadth.peek():
+    #     self.front=self.front.value
+    #     op.append(self.front.value)
+    # if front.left:
+    #     breadth.enqueue(front.left)
+    # if front.right:
+    #     breadth.enqueue(front.right)
+    # return op
+
+
+    pass
 class BinaryTree:
     """
     Depth First
     Depth first traversal is where we prioritize going through the depth (height) of the tree first. 
     There are multiple ways to carry out depth first traversal,
-    and each method changes the order in which we search/print the root.
+    and each method changes the order in which we search.print the root.
     Here are three methods for depth first traversal:
     """    
     def __init__(self):
@@ -64,7 +94,7 @@ class BinaryTree:
         _walk(self.root)
         return output_post
 
-      # /****************** new function
+      # .****************** new function
    
     def maximum_value(self,cur_node):
         """
@@ -191,7 +221,7 @@ if __name__ == "__main__":
     bst.add(-2)
     bst.add(-1)
     print(f'contains 10 :{bst.contains(10)}')
-
+    print(breadthFirst(Bt.root))
         #     2
         #   /    \
         # -2      10
