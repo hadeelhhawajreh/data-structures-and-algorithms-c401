@@ -1,4 +1,6 @@
 # from stacks_and_queues.stack_queue import Queue
+from collections import deque  
+
 class Node:
     def __init__(self,value):
         self.value=value
@@ -6,19 +8,6 @@ class Node:
         self.right=None
     
 
-def breadthFirst(root):
-    if not root:
-        return 
-    else:
-        queue=[]
-        queue.append(root)
-    while(len(queue)>0):
-        print(queue[0])
-        queue.pop(0)
-    if node.left:
-           queue.append(node.left)
-    if node.right:
-        queue.append(node.right)
 
 
     # op=[]
@@ -43,9 +32,28 @@ class BinaryTree:
     and each method changes the order in which we search.print the root.
     Here are three methods for depth first traversal:
     """    
+
     def __init__(self):
         self.root=None
 
+
+# ############
+
+    def breadthFirst(self,root):
+        if not root:
+            return 
+        else:
+            queue=[]
+            queue.append(root)
+        while(len(queue)>0):
+            print(queue[0])
+            queue.pop(0)
+        if self.root.left:
+            queue.append(self.root.left)
+        if self.root.right:
+            queue.append(self.root.right)
+
+#############
     def PreOrder(self):
         """
         depth first traversals and returns an array of the values, ordered appropriately.
@@ -221,12 +229,13 @@ if __name__ == "__main__":
     bst.add(-2)
     bst.add(-1)
     print(f'contains 10 :{bst.contains(10)}')
-    print(breadthFirst(Bt.root))
-        #     2
-        #   /    \
-        # -2      10
-        #   \    /
-        #   -1   12
+    print(Bt.breadthFirst(Bt))
+    #      2
+    #    /    \
+    #  -2      10
+    #    \    /
+    #    -1   12
+    
 
 
 
