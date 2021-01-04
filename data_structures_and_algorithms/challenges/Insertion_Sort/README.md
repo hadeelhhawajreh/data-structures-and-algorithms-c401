@@ -1,11 +1,12 @@
 # Challenge Summary
-<!-- Short summary or background information -->
+Selection Sort is a sorting algorithm that traverses the array multiple times as it slowly builds out the sorting sequence. The traversal keeps track of the minimum value and places it in the front of the array which should be incrementally sorted.
+
 
 ## Challenge Description
-<!-- Description of the challenge -->
-
+how to solve it using for loop and multiple parameter like j and temp and how to reassing the value 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-
+space o(1)
+time o(n2)
 ## Solution
 <!-- Embedded whiteboard image -->
+![img](../../assets/insetrionsort.png)
