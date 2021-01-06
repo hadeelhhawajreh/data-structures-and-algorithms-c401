@@ -37,7 +37,7 @@
 # i                j
 # Left array        Right arry 
 #  new array merge sort index=k
-def mergeSort(arr):
+def MergeSort(arr):
     new=[]
     if len(arr) > 1:
  
@@ -47,9 +47,9 @@ def mergeSort(arr):
  
         R = arr[mid:]
  
-        mergeSort(L)
+        MergeSort(L)
  
-        mergeSort(R)
+        MergeSort(R)
  
         i = j = k = 0
  
@@ -76,4 +76,4 @@ def mergeSort(arr):
  
 if __name__ == '__main__':
     arr = [12, 11, 13, 5, 6, 7]
-    print(mergeSort(arr))
+    print(MergeSort(arr))
