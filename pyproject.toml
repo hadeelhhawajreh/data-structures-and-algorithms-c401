@@ -6,6 +6,7 @@ authors = ["Hadeel H Al-Hawajreh <hadeelhhawajreh@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+javascripthon = "^0.11"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

@@ -117,7 +117,83 @@ class LinkedList():
                 #current is last node
                 # make curret point to new nodes 
             current.next=node
+    
+    # def isPalind(self):
+    #     cur=self.head
+    #     op=[]
+    #     while cur:
+    #         op.append(cur.value)
+    #         cur=cur.next
+        
+    #     # print(len(op))
+    #     n=len(op)
+    #     print(op)
+    #     print(op[-2])
 
+    #     for i in range(len(op)):
+    #         print('iiiiii',i,op[i],-i-1,op[-i-1])
+    #         if op[i]==op[i-i] and i != n and i-1 !=n and len(op)!=1:
+    #             # if op[i] and op[len(op)-1] ==n:
+    #             v=op.pop(i)
+    #             v2=op.pop()
+    #             print('oooooooooooopppppppp',op)
+                
+    #             print('v,v2',v,v2)
+        
+    #     if len(op)==1:
+    #         return True
+    #     return False
+    def palind(self):
+        list2 = []
+        current =self.head
+        while current:
+            list2.append(current.value)
+            current= current.next
+        print('list',list2)
+        print(' reversed list ',list2[::-1])
+
+        for ele in list2[::-1]:
+            current=self.head
+            if ele==current.value:
+                return True
+            return False
+    
+
+    def reversed(self):
+        list=[]
+        reverse=[]
+        cur=self.head
+        while cur:
+            list.append(cur.value)
+            cur=cur.next
+        # print(list)
+        for i in range(len(list)):
+            reverse.append(list[-i-1])
+            # reverse.append(list.pop())
+        return reverse
+
+        
+
+        # pal=True
+        # while current:
+        #     value=list2.pop()
+        #     print(pal)
+        #     if current.value==value:
+        #         pal=True
+        #     else:
+        #         pal= False
+        #     current=current.next
+        # return pal
+
+        # isPalind =True
+        # while current:
+        #     value= list2.pop()
+        #     if current.value == value :
+        #         isPalind = True
+        #     else:
+        #         isPalind=False
+        #     current = current.next
+        # return isPalind
 
 if __name__ == "__main__":
     ll=LinkedList()
@@ -126,8 +202,18 @@ if __name__ == "__main__":
     ll.insert_node(15)
     ll.insert_node(20)
     ll.insert_node(25)
+    # {25} -> {20} -> {15} -> {10} -> {5} -> NULL
     print(ll.insert_after(10,0))
     print(ll.insert_before(5,-1))
     print(ll.insert_after(5,-20))
+    l2=LinkedList()
+    l2.insert_node(5)
+    l2.insert_node(10)
+    l2.insert_node(15)
+    l2.insert_node(10)
+    l2.insert_node(5)
+    print(ll.palind())
+    print(l2.palind())
     print(ll)
-    print(ll.kt_from_end(2))
+    print(ll.reversed())
+    # print(ll.kt_from_end(2))

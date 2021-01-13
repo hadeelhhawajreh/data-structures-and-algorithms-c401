@@ -92,6 +92,18 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
+name = "dukpy"
+version = "0.2.3"
+description = "Simple JavaScript interpreter for Python"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+testing = ["pytest", "pytest-cov", "mock"]
+webassets = ["webassets"]
+
+[[package]]
 name = "isort"
 version = "5.6.4"
 description = "A Python utility / library to sort Python imports."
@@ -105,12 +117,41 @@ requirements_deprecated_finder = ["pipreqs", "pip-api"]
 colors = ["colorama (>=0.4.3,<0.5.0)"]
 
 [[package]]
+name = "javascripthon"
+version = "0.11"
+description = "Javascript for refined palates: a Python 3 to ES6 Javascript translator"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+dukpy = "*"
+macropy3 = "1.1.0b2"
+
+[package.extras]
+dev = ["metapensiero.tool.bump-version", "readme-renderer"]
+test = ["pytest", "pytest-cov", "meta"]
+
+[[package]]
 name = "lazy-object-proxy"
 version = "1.4.3"
 description = "A fast and thorough lazy object proxy."
 category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[[package]]
+name = "macropy3"
+version = "1.1.0b2"
+description = "Macros for Python: Quasiquotes, Case Classes, LINQ and more!"
+category = "main"
+optional = false
+python-versions = "~=3.4"
+
+[package.extras]
+js_snippets = ["pjs", "selenium"]
+pinq = ["sqlalchemy"]
+pyxl = ["pyxl3"]
 
 [[package]]
 name = "mccabe"
@@ -294,7 +335,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "95f1f1086bee2924e71c27f74a7ad7d4f7911b343a07c55cf2b871382f3361f1"
+content-hash = "6cd0eae5d2a75027233e20ee3ca1371f370f17dd9713a80a1aa8ef4c31541f7b"
 
 [metadata.files]
 appdirs = [
@@ -327,9 +368,37 @@ colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
     {file = "colorama-0.4.4.tar.gz", hash = "sha256:5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"},
 ]
+dukpy = [
+    {file = "dukpy-0.2.3-cp27-cp27m-manylinux1_i686.whl", hash = "sha256:edd0862c34f085b60f17fc214c19ab6e38166fd08c85506aeaf370449b3ca20f"},
+    {file = "dukpy-0.2.3-cp27-cp27m-manylinux1_x86_64.whl", hash = "sha256:99e5a90e01cf60a52bafed04d2099ab91b853279429c39a6010fcb264615679a"},
+    {file = "dukpy-0.2.3-cp27-cp27m-win32.whl", hash = "sha256:267ddd5e4e88903467d3b0940b26e248739f2c870dde1365749fe39f24b76ebe"},
+    {file = "dukpy-0.2.3-cp27-cp27m-win_amd64.whl", hash = "sha256:26af4776043578cd5a90b723f97c862172dd0c03be90db462c4a50526b370b70"},
+    {file = "dukpy-0.2.3-cp27-cp27mu-manylinux1_i686.whl", hash = "sha256:9a89548ff0bd15e415755bc034f76eb6220e8e0d5b9f9d476e6c7b7edc9470b7"},
+    {file = "dukpy-0.2.3-cp27-cp27mu-manylinux1_x86_64.whl", hash = "sha256:906ec0fa1933fdb0df49e2de286ea8d64f14f7a1ed23705057b2f8eb73c5a036"},
+    {file = "dukpy-0.2.3-cp35-cp35m-manylinux1_i686.whl", hash = "sha256:0658ecda9e85499c2a3236f59837aab27fbef19b75544f1d1f33704fa43e52e7"},
+    {file = "dukpy-0.2.3-cp35-cp35m-manylinux1_x86_64.whl", hash = "sha256:39739d135786d14b430c1d0a82b821d731dfec31369d4a315e1929ca37c48d72"},
+    {file = "dukpy-0.2.3-cp35-cp35m-win32.whl", hash = "sha256:f90e133688e2d2d010c909b7a0e8d2dff73b7c08622480dcb6f8d81169a48235"},
+    {file = "dukpy-0.2.3-cp35-cp35m-win_amd64.whl", hash = "sha256:e9512519d39d048e64c89a876e3d4b569862e9bacdb9294046b13385b92fe657"},
+    {file = "dukpy-0.2.3-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:9aa761142872407d39da88fdbfcc0cc77c6a91b25c9cb9547b564c3e699137b6"},
+    {file = "dukpy-0.2.3-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:5b3589426d20dc46d6758754a42f359ad265f02a508de9978065de60626249dd"},
+    {file = "dukpy-0.2.3-cp36-cp36m-win32.whl", hash = "sha256:cf8f702599f3abb42a1bc64df2d7a63115226042feff57b89d8f0fd3d5cb2592"},
+    {file = "dukpy-0.2.3-cp36-cp36m-win_amd64.whl", hash = "sha256:494bccfe65c0db95c498584a99052b4039c28f171c901cf609dadf303c097d62"},
+    {file = "dukpy-0.2.3-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:061f84e9786f18e7bc63c78afcddec7287ebacae35b4a95c4c49fac0146b6f0d"},
+    {file = "dukpy-0.2.3-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:79f1dfe1276b3b2cef6f353df8889da45cab4cbae88c1b0c2f8895bc68efb345"},
+    {file = "dukpy-0.2.3-cp37-cp37m-win32.whl", hash = "sha256:123c39095d5b282f2fdebe08088572688c67ce7d876129eb4bb7e1262650a4af"},
+    {file = "dukpy-0.2.3-cp37-cp37m-win_amd64.whl", hash = "sha256:929c5fe7fc4c0aff25c8bf6284e9fb3a3ac74430104c2d260858b76e290013fe"},
+    {file = "dukpy-0.2.3-cp38-cp38-manylinux1_i686.whl", hash = "sha256:3395f84d793f1be55f250705fd1f4562c58718dde0304ae21b001dc0332e020a"},
+    {file = "dukpy-0.2.3-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:9499ec53247cc0e2453d2be0586d9fa6803b751961d05bc947946341ecea6560"},
+    {file = "dukpy-0.2.3-cp38-cp38-win32.whl", hash = "sha256:ff245b01239fbb25b4a0b9bf30d3b4499648ce52bba981fe2cbac868052354fe"},
+    {file = "dukpy-0.2.3-cp38-cp38-win_amd64.whl", hash = "sha256:770c0795cbe5c41b604b12f372d2905587035f2f83489d2e1c36b88d50f9b175"},
+    {file = "dukpy-0.2.3.tar.gz", hash = "sha256:cc8dd158326f95231d320da80be6e6a1d72bbaad9de2569eaffb6af736f45e6b"},
+]
 isort = [
     {file = "isort-5.6.4-py3-none-any.whl", hash = "sha256:dcab1d98b469a12a1a624ead220584391648790275560e1a43e54c5dceae65e7"},
     {file = "isort-5.6.4.tar.gz", hash = "sha256:dcaeec1b5f0eca77faea2a35ab790b4f3680ff75590bfcb7145986905aab2f58"},
+]
+javascripthon = [
+    {file = "javascripthon-0.11.tar.gz", hash = "sha256:16077e073721507dbea175465cf52b30b7bb16a178a346b5834ae41d95463ad9"},
 ]
 lazy-object-proxy = [
     {file = "lazy-object-proxy-1.4.3.tar.gz", hash = "sha256:f3900e8a5de27447acbf900b4750b0ddfd7ec1ea7fbaf11dfa911141bc522af0"},
@@ -353,6 +422,9 @@ lazy-object-proxy = [
     {file = "lazy_object_proxy-1.4.3-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:a6ae12d08c0bf9909ce12385803a543bfe99b95fe01e752536a60af2b7797c62"},
     {file = "lazy_object_proxy-1.4.3-cp38-cp38-win32.whl", hash = "sha256:5541cada25cd173702dbd99f8e22434105456314462326f06dba3e180f203dfd"},
     {file = "lazy_object_proxy-1.4.3-cp38-cp38-win_amd64.whl", hash = "sha256:59f79fef100b09564bc2df42ea2d8d21a64fdcda64979c0fa3db7bdaabaf6239"},
+]
+macropy3 = [
+    {file = "macropy3-1.1.0b2.tar.gz", hash = "sha256:7a8eae9886ea4a5df4fcf4f71f53165b82becfc7fc87d9c1c8cd2196f22d9408"},
 ]
 mccabe = [
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
