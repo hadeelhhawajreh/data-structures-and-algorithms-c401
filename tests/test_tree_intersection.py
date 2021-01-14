@@ -18,8 +18,7 @@ def test_case1():
     bt2.root.right=Node(55)
     bt2.root.right.left=Node(30)
     bt2.root.right.right=Node(60)
-    assert treeIntersection(bt,bt2)==[60, 20, 55, 25]
-
+    assert treeIntersection(bt,bt2)==[25, 55, 60, 20]
 def test_case2():
     bt3=BinaryTree()
     bt3.root=Node(150)
@@ -49,4 +48,4 @@ def test_case2():
     print(bt4.PreOrder())
     print(treeIntersection(bt3,bt4))
     # [125, 175, 160, 100, 200, 500, 350]
-    assert treeIntersection(bt3,bt4)==[125, 175, 160, 100, 200, 500, 350]
+    assert treeIntersection(bt3,bt4)==[100,160,125,175,200,350,500]

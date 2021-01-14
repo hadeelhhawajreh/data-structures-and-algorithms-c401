@@ -1,16 +1,15 @@
 from data_structures_and_algorithms.data_structures.Tree.binary_tree.binary_tree import BinaryTree,Node
 def treeIntersection(bt,bt2):
-    x=bt.PostOrder()
-    y=bt2.PostOrder()
+    x=bt.PreOrder()
+    y=bt2.PreOrder()
     output=[]
     # for i in range(max(len(bt.PostOrder()),len(bt2.PostOrder()))):
     #     if x[i] in y:
     #         output.append(x[i])
-    for i in bt.PostOrder():
+    for i in bt.PreOrder():
         if i in y:
             output.append(i)
     return(output)
-
 if __name__ == "__main__":
     bt=BinaryTree()
     bt.root=Node(25)
@@ -18,14 +17,14 @@ if __name__ == "__main__":
     bt.root.left.left=Node(2)
     bt.root.left.right=Node(-1)
     bt.root.right=Node(55)
-    # bt.root.right.left=Node(60)
+    bt.root.right.left=Node(60)
     bt.root.right.right=Node(20)
     print(bt.PostOrder())
     bt2=BinaryTree()
     bt2.root=Node(10)
     bt2.root.left=Node(15)
     bt2.root.left.left=Node(20)
-    # bt2.root.left.right=Node(25)
+    bt2.root.left.right=Node(25)
     bt2.root.right=Node(55)
     bt2.root.right.left=Node(30)
     bt2.root.right.right=Node(60)
