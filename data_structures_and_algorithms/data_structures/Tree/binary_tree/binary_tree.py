@@ -19,10 +19,8 @@ class BinaryTree:
 
     def PreOrder(self):
         """
-
         depth first traversals and returns an array of the values, ordered appropriately.
         Pre-order: root >> left >> right
-
         """    
         output_pre=[]
         def _walk(node):
@@ -36,10 +34,8 @@ class BinaryTree:
     
     def InOrder(self):
         """
-
         depth first traversals and returns an array of the values, ordered appropriately.
         In-order: left >> root >> right
-
         """        
         output_in=[]
         def _walk(node):
@@ -55,7 +51,6 @@ class BinaryTree:
         """
         depth first traversals and returns an array of the values, ordered appropriately.
         Post-order: left >> right >> root
-
         """        
         output_post=[]
         def _walk(node):
