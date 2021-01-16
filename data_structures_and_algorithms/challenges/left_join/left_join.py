@@ -16,6 +16,8 @@ if __name__ == "__main__":
         'C':'Chaitali',
         'D':'Komal',
     } 
+
+    
     dict_right={
         'A':'Muffy',
         'C':'Hardik',

@@ -17,7 +17,9 @@ def test_case_len():
         'A':'Ramesh',
         'B':'Khilan',
         'C':'Chaitali',
-        'D':'Komal',} 
+        'D':'Komal',}
+
+     
     dict_right={
         'A':'Muffy',
         'C':'Hardik',
